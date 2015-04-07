@@ -1,17 +1,17 @@
 ##### Change the following for your environment:
-CROSS_COMPILE=/home/anushruth/tools/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi- 
-COMPILE_OPTS=-I/home/anushruth/tools/android-ndk-r10d/platforms/android-21/arch-arm/usr/include $(INCLUDES) -I. -O2 -DSOCKLEN_T=socklen_t -DNO_SSTREAM=1 -D_LARGEFILE_SOURCE=1 -D_FILE_OFFSET_BITS=64 
+CROSS_COMPILE=/usr/android/android-ndk-r10b//toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi- 
+COMPILE_OPTS=-I/usr/android/android-ndk-r10b//platforms/android-19/arch-arm/usr/include ${INCLUDES} -I. -O2 -DSOCKLEN_T=socklen_t -DNO_SSTREAM=1 -D_LARGEFILE_SOURCE=1 -D_FILE_OFFSET_BITS=64 -DLOCALE_NOT_USED -DXLOCALE_NOT_USED -D__STDC_CONSTANT_MACROS
 C=c
-C_COMPILER=/home/anushruth/tools/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc
-C_FLAGS= ${COMPILE_OPTS}
+C_COMPILER=/usr/android/android-ndk-r10b//toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-gcc
+C_FLAGS= ${COMPILE_OPTS} 
 CPP=cpp
-CPLUSPLUS_COMPILER=/home/anushruth/tools/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++
+CPLUSPLUS_COMPILER=/usr/android/android-ndk-r10b//toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-g++
 CPLUSPLUS_FLAGS= ${COMPILE_OPTS} -Wall -DBSD=1
 OBJ=o
-LINK=/home/anushruth/tools/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-g++ -o
-LINK_OPTS= -L/home/anushruth/tools/android-ndk-r10d/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a -lgnustl_shared  -L/home/anushruth/tools/android-ndk-r10d/platforms/android-21/arch-arm/usr/lib
+LINK=/usr/android/android-ndk-r10b//toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-g++ -o
+LINK_OPTS= -L/usr/android/android-ndk-r10b//sources/cxx-stl/gnu-libstdc++/4.8/libs/armeabi-v7a -lgnustl_shared --sysroot=/usr/android/android-ndk-r10b//platforms/android-19/arch-arm
 CONSOLE_LINK_OPTS=${LINK_OPTS}
-LIBRARY_LINK=/home/anushruth/tools/android-ndk-r10d/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-ar cr 
+LIBRARY_LINK=/usr/android/android-ndk-r10b//toolchains/arm-linux-androideabi-4.8/prebuilt/darwin-x86_64/bin/arm-linux-androideabi-ar cr 
 LIB_SUFFIX=a
 LIBS_FOR_CONSOLE_APPLICATION=
 LIBS_FOR_GUI_APPLICATION=
